@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather Dashboard</h1>
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="cityInput" 
+                    placeholder="Enter city name..." 
+                    autocomplete="off"
+                >
+                <button id="searchBtn">Search</button>
+            </div>
+        </header>
+
+        <div class="error-message" id="errorMessage"></div>
+
+        <main>
+            <!-- Current Weather -->
+            <section class="current-weather">
+                <div class="weather-card">
+                    <div class="location-info">
+                        <h2 id="cityName">-</h2>
+                        <p id="date">-</p>
+                    </div>
+                    <div class="weather-main">
+                        <div class="temperature-section">
+                            <span id="temperature" class="temperature">-</span>
+                            <span class="celsius">°C</span>
+                        </div>
+                        <div class="weather-icon">
+                            <img id="weatherIcon" src="" alt="Weather icon">
+                        </div>
+                    </div>
+                    <div class="weather-description">
+                        <p id="description">-</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Weather Details -->
+            <section class="weather-details">
+                <div class="detail-card">
+                    <h3>Feels Like</h3>
+                    <p id="feelsLike" class="detail-value">-</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Humidity</h3>
+                    <p id="humidity" class="detail-value">-</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Wind Speed</h3>
+                    <p id="windSpeed" class="detail-value">-</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Pressure</h3>
+                    <p id="pressure" class="detail-value">-</p>
+                </div>
+                <div class="detail-card">
+                    <h3>Visibility</h3>
+                    <p id="visibility" class="detail-value">-</p>
+                </div>
+                <div class="detail-card">
+                    <h3>UV Index</h3>
+                    <p id="uvIndex" class="detail-value">-</p>
+                </div>
+            </section>
+
+            <!-- 5-Day Forecast -->
+            <section class="forecast-section">
+                <h2>5-Day Forecast</h2>
+                <div class="forecast-container" id="forecastContainer">
+                    <!-- Forecast cards will be populated here -->
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Weather data provided by Open-Meteo API</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
